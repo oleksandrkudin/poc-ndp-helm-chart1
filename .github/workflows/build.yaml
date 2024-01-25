@@ -1,0 +1,14 @@
+name: build
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    secrets: inherit
+    uses: oleksandrkudin/poc-ndp-workflows/.github/workflows/build.yaml@main
+    with:
+      # TODO: can be change with github.repository
+      unit: "poc-ndp-helm-chart1"
+      environment: dev

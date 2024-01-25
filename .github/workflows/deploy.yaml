@@ -1,0 +1,25 @@
+name: deploy
+
+on:
+  workflow_dispatch:
+    inputs:
+      release_version:
+        type: string
+        required: true
+      environment:
+        type: string
+        required: true
+      next_environment:
+        type: string
+        required: true
+
+jobs:
+  deploy:
+    secrets: inherit
+    uses: oleksandrkudin/poc-ndp-workflows/.github/workflows/deploy.yaml@main
+    with:
+      # TODO: can be change with github.repository
+      unit: "poc-ndp-helm-chart1"
+      release_version: ${{ inputs.release_version }}
+      environment: ${{ inputs.environment }}
+      next_environment: ${{ inputs.next_environment }}
