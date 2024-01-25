@@ -3,6 +3,8 @@ name: build
 on:
   push:
     branches: [main]
+  # TODO: is it necessary?
+  workflow_dispatch:
 
 jobs:
   build:
