@@ -6,6 +6,9 @@ on:
   # TODO: is it necessary?
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   build:
     secrets: inherit
