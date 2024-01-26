@@ -11,7 +11,7 @@ on:
         required: true
       next_environment:
         type: string
-        required: true
+        required: false
 
 permissions:
   contents: write
