@@ -13,10 +13,9 @@ on:
         type: string
         required: true
 
-# Looks like not necessary. Issue was in repository settings.        
-# permissions:
-#   contents: read
-#   id-token: write
+permissions:
+  contents: write
+  pull-requests: write
 
 jobs:
   deploy:
