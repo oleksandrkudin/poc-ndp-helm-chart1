@@ -13,9 +13,10 @@ on:
         type: string
         required: true
 
-permissions:
-  contents: read
-  id-token: write
+# Looks like not necessary. Issue was in repository settings.        
+# permissions:
+#   contents: read
+#   id-token: write
 
 jobs:
   deploy:

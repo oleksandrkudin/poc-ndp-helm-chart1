@@ -6,9 +6,10 @@ on:
   # TODO: is it necessary?
   workflow_dispatch:
 
-permissions:
-  contents: read
-  id-token: write
+# Looks like not necessary. Issue was in repository settings.
+# permissions:
+#   contents: read
+#   id-token: write
 
 jobs:
   build:
