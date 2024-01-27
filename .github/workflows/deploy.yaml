@@ -1,7 +1,7 @@
 name: deploy
 
 on:
-  workflow_dispatch:
+  workflow_call:
     inputs:
       release_version:
         type: string
@@ -22,7 +22,6 @@ jobs:
     secrets: inherit
     uses: oleksandrkudin/poc-ndp-workflows/.github/workflows/deploy.yaml@main
     with:
-      # TODO: can be change with github.repository
       unit: "poc-ndp-helm-chart1"
       release_version: ${{ inputs.release_version }}
       environment: ${{ inputs.environment }}
