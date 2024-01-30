@@ -12,6 +12,9 @@ on:
       next_environment:
         type: string
         required: false
+      app_version:
+        type: string
+        required: true
 
 permissions:
   contents: write
