@@ -9,9 +9,9 @@ on:
       environment:
         type: string
         required: true
-      next_environment:
-        type: string
-        required: false
+      # next_environment:
+      #   type: string
+      #   required: false
       app_version:
         type: string
         required: true
@@ -28,4 +28,4 @@ jobs:
       unit: "poc-ndp-helm-chart1"
       release_version: ${{ inputs.release_version }}
       environment: ${{ inputs.environment }}
-      next_environment: ${{ inputs.next_environment }}
+      #next_environment: ${{ inputs.next_environment }}
